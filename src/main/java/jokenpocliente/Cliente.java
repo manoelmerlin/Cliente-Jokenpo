@@ -12,9 +12,8 @@ public class Cliente {
         try {
             String msgDoServer;
             String msgDoCliente;
-            Boolean pvp = false;
             socket = new Socket("localhost", 8081);
-            System.out.println("Bem vindo para sair a qualquer momento digite 10");
+            System.out.println("Bem vindo ao Jokenpo! Para sair a qualquer momento digite 10");
             Comunicacao comunicacao = new Comunicacao(socket);
             msgDoServer = comunicacao.ReceberMsg();
     
@@ -27,12 +26,7 @@ public class Cliente {
                     System.out.println("Saindo.....");
                     socket.close();
                 }
-
-                if (pvp) {
-                    System.out.println("Aguarde o outro jogador");
-                } else {
-                    System.out.println("Aguarde..");
-                }     
+                    System.out.println("Loading");
 
                 System.out.println(comunicacao.ReceberMsg());
             }
