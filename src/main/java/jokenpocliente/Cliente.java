@@ -21,12 +21,12 @@ public class Cliente {
             while (true) {
                 msgDoCliente = entrada.nextLine();
                 comunicacao.EnviarMsg(msgDoCliente);
-
                 if (msgDoCliente.equals("10")) {
                     System.out.println("Saindo.....");
                     socket.close();
                 }
-                    System.out.println("Loading");
+
+                System.out.println("Loading");
 
                 System.out.println(comunicacao.ReceberMsg());
             }
